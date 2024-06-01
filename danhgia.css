@@ -1,0 +1,13 @@
+/* danhgia.css - Dành cho file danhgia.html */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #27AE60;
+}
+
+/* Thêm các style khác cho phần đánh giá tại đây */

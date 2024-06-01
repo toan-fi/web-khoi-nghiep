@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cac khoa hoc</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img width="200" src="images/logo.jpg" onclick="logo()" />
+        </div>
+        <div class="menu">
+            <li><a href="home.html">TRANG CHỦ</a></li>
+            <li><a href="khoahoc.html">KHOA HOC</a></li>
+            <li><a href="danhgia.html">DANH GIA</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="lienhe.html">LIEN HE</a></li>
+        </div>
+        <div class="others">
+            <li><input type="text" placeholder="  Tìm kiếm"><i class="fa fa-search"></i></li>
+            <li><a class="fa fa-bell" href="blog.html"></a></li>
+            <li><a class="fa fa-user" href="login.html"></a></li>
+        </div>
+    </header>
+    <!-- Thêm danh sách câu hỏi và câu trả lời tại đây -->
+
+    <div class="elsa-plans max-width-allpage" id="elsa-plans">
+        <div class="plans-choose-contain">
+            <h2 class="plans-choose-title">CÁC GÓI ĐĂNG KÝ</h2>
+            <div class="plans-button-container"> <a id="personal-plans-button" href="#" class="plans-button-single">DÀNH
+                    CHO
+                    CÁ NHÂN</a> <a id="enterprise-plans-button" href="https://vn.elsaspeak.com/b2b/business-vi/"
+                    class="plans-button-enterprise" target="_blank">DÀNH CHO DOANH NGHIỆP</a> </div>
+        </div>
+        <div class="elsa-plans-header">
+            <h2 class="elsa-plans-header-title">Học tiếng Anh cùng EzLingual</h2>
+            <p class="elsa-plans-header-text">Học tiếng Anh trực tuyến cùng EzLingual để rèn luyện các kỹ năng Anh ngữ với
+                kho
+                tài liệu học tiếng Anh đầy đủ nhất.</p>
+        </div>
+        <div class="elsa-plans-contain">
+            <div class="elsa-plans-item" onclick="payment.step1(1)" style="" tabindex="-1">
+                <div class="image-contain"> <img
+                        src="https://vn.elsaspeak.com/wp-content/uploads/2022/12/1-nam.png.webp"
+                        class="one-year-plan-img" alt="ELSA Pro 1 năm | ELSA Pro 1 year"> </div>
+                <div class="elsa-plans-price-detail">
+                    <h5 class="pack-title">EzLingual Pro 1 năm</h5>
+                    <p class="old-price"> Giá gốc: <span>1.095.000 Đ</span> </p>
+                    <p class="sell-price">985.000 Đ</p>
+                    <p class="promotion-text">Nhập mã <strong>OP30</strong> <br>giảm thêm <strong>30K</strong></p> <a
+                        id="btn-pro-0" class="btn-elsa-custom-blue" style="margin: 12px auto 4px; color: #fff"
+                        tabindex="-1">Mua ngay</a>
+                </div>
+            </div>
+            <div class="elsa-plans-item" onclick="payment.step1()" style="" tabindex="0">
+                <div class="image-contain"> <img
+                        src="https://vn.elsaspeak.com/wp-content/uploads/2024/05/279x190-px.jpg.webp"
+                        class="one-year-plan-img" alt="ELSA Pro trọn đời | ELSA Pro lifetime"> </div>
+                <div class="elsa-plans-price-detail">
+                    <h5 class="pack-title">EzLingual Pro trọn đời</h5>
+                    <p class="old-price"> Giá gốc: <span>10.995.000 Đ</span> </p>
+                    <p class="sell-price">2.195.000 Đ</p>
+                    <p class="promotion-text">Nhập mã <strong>VNM24LT</strong> <br>giảm thêm <strong>350K</strong></p>
+                    <a id="btn-pro-1" class="btn-elsa-custom-blue" style="margin: 12px auto 4px; color: #fff"
+                        tabindex="0">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

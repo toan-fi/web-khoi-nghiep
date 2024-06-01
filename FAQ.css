@@ -1,0 +1,19 @@
+/* Định dạng chung cho Trang FAQ */
+.faq-page {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+/* Câu hỏi và câu trả lời */
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding-left: 1rem;
+}
