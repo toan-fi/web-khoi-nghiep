@@ -1,13 +1,438 @@
-/* danhgia.css - Dành cho file danhgia.html */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration-color: none;
     color: #333;
-    line-height: 1.6;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: #fff;
+  }
+  header.hiddenb{
+    background: rgba(225, 225, 225, 0.3);
+  }
+  header:hover{
+    background: #fff;
+  }
+  
+  
+  .logo{
+    flex: 1
+  }
+  .logo img{
+    width: 62%;
+  }
+  
+  .menu{
+    flex: 3;
+    display: flex;
+  }
+  .menu >li{
+    margin: 24px 0 12px 0;
+    padding: 0 20px 0 50px;
+  }
+  .menu >li:hover{
+    background: rgba(225, 225, 225, 255);
+    padding-top:10px;
+    padding-bottom: 10px;
+  }
+  .menu >li:hover .sub-menu{
+    visibility: visible;
+    top: 90px;
+  }
+  .sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 0;
+    visibility: hidden;
+    top: 100px;
+    transition: 0.2s;
+    background: #fff;
+    z-index: 1;
+  }
+  .sub-menu li a{
+    font-weight: normal;
+    padding-left: 10px;
+  }
+  .sub-menu li a:hover{
+    border: 1px solid rgba(225, 225, 225, 255);
+    background: rgba(225, 225, 225, 255);
+  }
+  .sub-menu ul{
+    padding-left: 20px;
+  }
+  
+  
+  .menu li a{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+  }
+  
+  
+  .others{
+    flex: 0.8;
+    display: flex;
+  }
+  .others >li{
+    margin: 24px 0 12px 0;
+    padding: 0 12px 0 12px;
+  }
+  .others >li:first-child{
+    position: relative;
+  }
+  .others >li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: transparent;
+    outline: none;
+    transform: translateY(-20%);
+  }
+  .others >li:first-child i {
+    position: absolute;
+    right: 16px;
+  }
+  
+  #SlideFr{
+    padding-bottom: 40px;
+    overflow: hidden;
+    border-bottom: 2px solid #000;
+    padding-bottom: 50px;
+    height: 87vh;
+  }
+  
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 50%;
+    transition: 0.75s;
+    margin-top: 95px;
+    
+}
+  
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    padding-bottom: 1px;
+}
+  
+.dot-container{
+  display: flex;
+  margin-top: 20px;
+  height: 30px;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  transform: translateY(-500%);
 }
 
-h1 {
-    color: #27AE60;
+.dot{
+  height: 18px;
+  width: 18px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.dot.active{
+    background-color: #333;
+}
+  
+  
+  /*---------------------------------------contact-container-------------------------------------------------*/
+  .contact-container{
+      text-align: center;
+      padding-top: 50px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      font-size: 30px;
+      color: #000;
+      font-weight: bold;
+      padding-bottom: 50px;
+  }
+  
+  .contact-container input{
+      margin-top: 30px;
+      border: none;
+      border-bottom: 1px solid #000;
+      padding-bottom: 16px;
+      padding-top: 16px;
+      width: 400px;
+      text-align: center;
+      font-size: 20px;
+  }
+  
+  /*---------------------------------------footer-------------------------------------------------*/
+  .footer-top{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+    font-size: 24px;
+    padding-top: 30px;
+  }
+  
+  .footer-top li{
+    padding: 0 12px;
+    position: relative;
+  }
+  .footer-top li a{
+    text-decoration: none;
+  }
+  .footer-top li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #000000;
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  
+  .footer-top li:last-child::after{
+    display: none;
+  }
+  
+  .footer-top li:last-child a{
+    margin-right: 12px;
+    color: #f5fbfd;
+  }
+  
+  .footer-center{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 70px;
+    font-size: 24px;
+    color:#2b2b2bd3;
+  }
+  
+  .footer-bottom{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 70px;
+    font-size: 24px;
+    color: #ffffff;
+    padding-top: 20px;
+    
+  }
+  
+  .fot{
+    background: #60bdf7a4;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  
+
+
+
+  .elsa-speak-block {
+    background-color: #f4f4f4; /* Màu nền cho khối */
+    padding: 20px; /* Đệm xung quanh nội dung */
+    font-family: 'Arial', sans-serif; /* Phông chữ cho toàn bộ khối */
 }
 
-/* Thêm các style khác cho phần đánh giá tại đây */
+.max-width-allpage {
+    max-width: 1200px; /* Chiều rộng tối đa cho nội dung */
+    margin: auto; /* Căn giữa nội dung */
+}
+
+.img-elsa-speak {
+    width: 100%; /* Chiều rộng hình ảnh */
+    max-width: 500px; /* Chiều rộng tối đa cho hình ảnh */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+}
+
+.elsa-speak-block-content {
+    color: #333; /* Màu chữ cho nội dung */
+}
+
+.small-header-elsa-speak {
+    font-size: 14px; /* Kích thước phông chữ cho tiêu đề nhỏ */
+    color: #888; /* Màu chữ cho tiêu đề nhỏ */
+    text-transform: uppercase; /* Chữ hoa cho tiêu đề nhỏ */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề nhỏ */
+}
+
+.elsa-speak-block-title {
+    font-size: 24px; /* Kích thước phông chữ cho tiêu đề lớn */
+    color: #000; /* Màu chữ cho tiêu đề lớn */
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề lớn */
+}
+
+.elsa-speak-block-text {
+    font-size: 16px; /* Kích thước phông chữ cho đoạn văn */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    margin-bottom: 20px; /* Khoảng cách dưới đoạn văn */
+}
+
+.elsa-speak-block-list-content {
+    display: flex; /* Hiển thị danh sách theo dạng hàng ngang */
+    justify-content: space-between; /* Khoảng cách đều giữa các mục */
+}
+
+.elsa-speak-block-list-item {
+    display: flex; /* Hiển thị mục theo dạng hàng ngang */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    margin-bottom: 10px; /* Khoảng cách dưới mỗi mục */
+}
+
+.elsa-speak-block-list-item img {
+    width: 24px; /* Chiều rộng cho hình ảnh trong mục */
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+
+.btn-elsa-custom-blue {
+    background-color: #007bff; /* Màu nền cho nút màu xanh */
+    color: #fff; /* Màu chữ cho nút màu xanh */
+    padding: 10px 20px; /* Đệm xung quanh nút */
+    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    border-radius: 5px; /* Bo góc cho nút */
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+}
+
+.btn-elsa-custom-pink {
+    background-color: #ff1493; /* Màu nền cho nút màu hồng */
+    color: #fff; /* Màu chữ cho nút màu hồng */
+    padding: 10px 20px; /* Đệm xung quanh nút */
+    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    border-radius: 5px; /* Bo góc cho nút */
+}
+
+
+
+
+
+.elsa-feeling-block {
+  background-color: #fff; /* Màu nền cho khối cảm nhận */
+  padding: 40px 20px; /* Đệm xung quanh nội dung */
+  font-family: 'Helvetica Neue', sans-serif; /* Phông chữ cho toàn bộ khối */
+}
+
+.max-width-allpage {
+  max-width: 1200px; /* Chiều rộng tối đa cho nội dung */
+  margin: auto; /* Căn giữa nội dung */
+}
+
+.elsa-feeling-header {
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+}
+
+.small-header-elsa-feeling {
+  font-size: 18px; /* Kích thước phông chữ cho tiêu đề nhỏ */
+  color: #6c757d; /* Màu chữ cho tiêu đề nhỏ */
+  text-transform: uppercase; /* Chữ hoa cho tiêu đề nhỏ */
+}
+
+.elsa-feeling-title {
+  font-size: 32px; /* Kích thước phông chữ cho tiêu đề lớn */
+  color: #000; /* Màu chữ cho tiêu đề lớn */
+  margin-bottom: 50px; /* Khoảng cách dưới tiêu đề lớn */
+}
+
+.elsa-feeling-review-block {
+  display: flex; /* Hiển thị các đánh giá theo dạng hàng ngang */
+  justify-content: space-around; /* Khoảng cách đều giữa các đánh giá */
+  margin-bottom: 30px; /* Khoảng cách dưới các đánh giá */
+}
+
+.elsa-feeling-review-item {
+  background-color: #f8f9fa; /* Màu nền cho từng đánh giá */
+  border-radius: 10px; /* Bo góc cho từng đánh giá */
+  padding: 20px; /* Đệm xung quanh nội dung đánh giá */
+  margin: 10px; /* Khoảng cách giữa các đánh giá */
+}
+
+.review-item-header {
+  display: flex; /* Hiển thị tiêu đề đánh giá theo dạng hàng ngang */
+  align-items: center; /* Căn giữa các mục theo chiều dọc */
+  margin-bottom: 15px; /* Khoảng cách dưới tiêu đề đánh giá */
+}
+
+.comma-icon {
+  width: 32px; /* Chiều rộng cho biểu tượng dấu phẩy */
+  margin-right: 10px; /* Khoảng cách giữa biểu tượng và tiêu đề */
+}
+
+.review-item-text {
+  font-size: 16px; /* Kích thước phông chữ cho đoạn văn */
+  line-height: 1.5; /* Khoảng cách giữa các dòng */
+  color: #495057; /* Màu chữ cho đoạn văn */
+  margin-bottom: 20px; /* Khoảng cách dưới đoạn văn */
+}
+
+.author-review {
+  display: flex; /* Hiển thị thông tin tác giả theo dạng hàng ngang */
+  align-items: center; /* Căn giữa các mục theo chiều dọc */
+}
+
+.author-img {
+  width: 50px; /* Chiều rộng cho hình ảnh tác giả */
+  height: 50px; /* Chiều cao cho hình ảnh tác giả */
+  border-radius: 50%; /* Làm tròn hình ảnh tác giả */
+  margin-right: 10px; /* Khoảng cách giữa hình ảnh và thông tin tác giả */
+}
+
+.info-author {
+  display: flex; /* Hiển thị thông tin tác giả theo dạng hàng ngang */
+  flex-direction: column; /* Sắp xếp thông tin tác giả theo chiều dọc */
+}
+
+.author-name {
+  font-weight: bold; /* In đậm tên tác giả */
+  color: #007bff; /* Màu chữ cho tên tác giả */
+}
+
+.author-work-position {
+  font-size: 14px; /* Kích thước phông chữ cho vị trí công việc */
+  color: #6c757d; /* Màu chữ cho vị trí công việc */
+}
+
+.btn-elsa-custom-gray {
+  background-color: #6c757d; /* Màu nền cho nút màu xám */
+  color: #fff; /* Màu chữ cho nút màu xám */
+  padding: 10px 20px; /* Đệm xung quanh nút */
+  text-decoration: none; /* Bỏ gạch chân cho liên kết */
+  border-radius: 5px; /* Bo góc cho nút */
+  display: block; /* Hiển thị nút dưới dạng khối */
+  width: fit-content; /* Chiều rộng nút phù hợp với nội dung */
+  margin: 20px auto; /* Căn giữa nút */
+}
